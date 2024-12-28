@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞船操作面板</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0e0e0e, #1a1a1a);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .panel {
+            background-color: rgba(30, 30, 30, 0.9);
+            border: 2px solid #555;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 900px;
+        }
+        .view {
+            border: 1px solid #777;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            height: 120px;
+            background: rgba(50, 50, 50, 0.8);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+        .view:hover {
+            transform: scale(1.02);
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .button:active {
+            transform: translateY(0);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <h1>飞船操作面板</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="view">操作物状态</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="view">历史运行状态</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="view">健康度监测</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="button" id="startButton">启动</button>
+                <button class="button" id="stopButton">停止</button>
+                <button class="button" id="restartButton">重启</button>
+                <button class="button" id="statusCheckButton">状态检查</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 jQuery 和 Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#startButton').click(function() {
+                alert('启动命令已发送！');
+            });
+            $('#stopButton').click(function() {
+                alert('停止命令已发送！');
+            });
+            $('#restartButton').click(function() {
+                alert('重启命令已发送！');
+            });
+            $('#statusCheckButton').click(function() {
+                alert('状态检查命令已发送！');
+            });
+        });
+    </script>
+</body>
+</html>
